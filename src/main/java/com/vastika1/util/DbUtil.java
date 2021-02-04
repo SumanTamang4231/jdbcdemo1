@@ -1,4 +1,4 @@
-package util;
+package com.vastika1.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +14,7 @@ public class DbUtil {
     public static final String PASSWORD = "root";
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
-        class.forName(DRIVER);
+        Class.forName(DRIVER);
         return DriverManager.getConnection(URL, USER_NAME,PASSWORD);
     }
 }
